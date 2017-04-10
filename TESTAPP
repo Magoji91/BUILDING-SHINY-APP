@@ -6,7 +6,7 @@ library(leaflet)
 df <- data.frame("id" = c("1", "2", "3", "4", "5", "6", "7"),
                  "lng" = c(-46.6974, -46.6668, -46.6447, -46.6754, -46.6735, -46.6718454, -46.6834),
                  "lat" = c(-23.5969, -23.5152, -23.481,-23.5284, -23.5277, -23.5259961, -23.5244),
-                 "Text" = c("EFC4618-21h22", "EFC4618-17h43-09h16", "EFC4618-21h28","QIE0083-14h46", "QIE0083-17h50", "QIE0083-07h24", "QIE0083-13h25"  ))
+                 "Text" = c("EFC4618-21h22", "EFC4618-17h43-09h16", "EFC4618-21h28","QIE0083-14h46", "QIE0083-17h50", "QIE0083-07h24", "QIE0083-13h25")
 
 
 ui <- fluidPage(
@@ -66,9 +66,6 @@ server <- function(input, output, session) {
   output$locationid5 <- renderText({paste("Location Selected using popup select button click:", id5())})
   output$locationid6 <- renderText({paste("Location Selected using popup select button click:", id6())})
   output$locationid7 <- renderText({paste("Location Selected using popup select button click:", id7())})
-}
-}
-}
 }
 
 shinyApp(ui, server)
